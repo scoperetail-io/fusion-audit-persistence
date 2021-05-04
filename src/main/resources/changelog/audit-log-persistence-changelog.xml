@@ -1,0 +1,82 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+	<changeSet author="JavierRC1" id="initial_db_create">
+		<createTable tableName="message_log">
+			<column name="id" type="BIGINT" autoIncrement="true">
+				<constraints primaryKey="true"
+										 primaryKeyName="pk_message_log"
+										 nullable="false"/>
+			</column>
+			<column name="log_key" type="VARCHAR(64)">
+				<constraints nullable="false" />
+			</column>
+			<column name="event_id" type="VARCHAR(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="payload" type="CLOB">
+				<constraints nullable="false" />
+			</column>
+			<column name="message_status" type="SMALLINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="duplicate_cnt" type="INT" />
+			<column name="create_ts" type="TIMESTAMP" />
+			<column name="mark_delete" type="CHAR(1)" />
+		</createTable>
+
+		<createTable tableName="message_log_key">
+			<column name="log_key" type="VARCHAR(64)">
+				<constraints primaryKey="true"
+										 primaryKeyName="pk_message_log_key"
+										 nullable="false"/>
+			</column>
+			<column name="k01" type="VARCHAR(32)" />
+			<column name="k02" type="VARCHAR(32)" />
+			<column name="k03" type="VARCHAR(32)" />
+			<column name="k04" type="VARCHAR(32)" />
+			<column name="k05" type="VARCHAR(32)" />
+		</createTable>
+
+		<createTable tableName="message_status">
+			<column name="status_id" type="SMALLINT">
+				<constraints primaryKey="true"
+										 primaryKeyName="pk_message_status"
+										 nullable="false"/>
+			</column>
+			<column name="status_code" type="VARCHAR(15)" />
+			<column name="description" type="VARCHAR(30)" />
+		</createTable>
+
+		<insert tableName="message_status">
+			<column name="status_id" value="1" />
+			<column name="status_code" value="SUCCESS" />
+			<column name="description" value="Success" />
+		</insert>
+		<insert tableName="message_status">
+			<column name="status_id" value="2" />
+			<column name="status_code" value="APP_ERROR" />
+			<column name="description" value="Application error" />
+		</insert>
+		<insert tableName="message_status">
+			<column name="status_id" value="3" />
+			<column name="status_code" value="SYS_ERROR" />
+			<column name="description" value="System error" />
+		</insert>
+		<insert tableName="message_status">
+			<column name="status_id" value="4" />
+			<column name="status_code" value="INVALID_MESSAGE" />
+				<column name="description" value="Invalid Message" />
+		</insert>
+		<insert tableName="message_status">
+			<column name="status_id" value="5" />
+			<column name="status_code" value="DUPLICATE" />
+				<column name="description" value="Duplicate" />
+		</insert>
+
+	</changeSet>
+
+</databaseChangeLog>

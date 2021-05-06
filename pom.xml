@@ -104,10 +104,10 @@
 			</exclusions>
 		</dependency>
 
-		<!-- Use MySQL Connector-J -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>2.7.2</version>
 		</dependency>
 	</dependencies>
 

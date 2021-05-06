@@ -1,8 +1,8 @@
-package com.scoperetail.fusion.audit.persistence.entity;
-
-import lombok.*;
+/* ScopeRetail (C)2021 */
+package com.scoperetail.fusion.adapter.out.persistence.jpa.entity;
 
 import javax.persistence.*;
+import lombok.*;
 
 @Builder
 @NoArgsConstructor

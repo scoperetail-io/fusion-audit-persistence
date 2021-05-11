@@ -11,7 +11,7 @@
 
 	<groupId>com.scoperetail.fusion</groupId>
 	<artifactId>fusion-audit-persistence</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>fusion-audit-persistence</name>
 	<description>Audit persistence layer</description>

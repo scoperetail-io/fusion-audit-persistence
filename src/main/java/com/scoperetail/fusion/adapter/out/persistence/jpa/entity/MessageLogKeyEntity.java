@@ -3,6 +3,7 @@ package com.scoperetail.fusion.adapter.out.persistence.jpa.entity;
 
 import javax.persistence.*;
 import lombok.*;
+import org.springframework.data.domain.Persistable;
 
 @Builder
 @NoArgsConstructor
@@ -11,7 +12,7 @@ import lombok.*;
 @Setter
 @Entity
 @Table(name = "message_log_key")
-public class MessageLogKeyEntity {
+public class MessageLogKeyEntity implements Persistable {
   @Id
   @Column(name = "log_key", nullable = false)
   private String logKey;
@@ -30,4 +31,13 @@ public class MessageLogKeyEntity {
 
   @Column(name = "k05")
   private String k05;
-}
+
+  @Override
+  public Object getId() {
+    return logKey;
+  }
+
+  @Override
+  public boolean isNew() {
+    return true;
+  }}

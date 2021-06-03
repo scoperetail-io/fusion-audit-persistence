@@ -1,5 +1,5 @@
 /* ScopeRetail (C)2021 */
-package com.scoperetail.fusion.adapter.out.persistence.jpa.entity;
+package com.scoperetail.fusion.audit.persistence.entity;
 
 import javax.persistence.*;
 import lombok.*;

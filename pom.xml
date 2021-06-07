@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.scoperetail.fusion</groupId>
 	<artifactId>fusion-audit-persistence</artifactId>
-	<version>0.8-SNAPSHOT</version>
+	<version>0.8</version>
 	<packaging>jar</packaging>
 	<name>fusion-audit-persistence</name>
 	<description>Audit persistence layer</description>
@@ -30,7 +28,7 @@
 
 	<scm>
 		<connection>scm:git:git@github.com:scoperetail-io/fusion-audit-persistence.git</connection>
-		<tag>HEAD</tag>
+		<tag>fusion-audit-persistence-0.8</tag>
 		<url>https://github.com/scoperetail-io/fusion-audit-persistence</url>
 	</scm>
 

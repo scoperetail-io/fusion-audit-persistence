@@ -49,7 +49,7 @@ public interface MessageLogRepository extends JpaRepository<MessageLogEntity, In
   Optional<MessageLogEntity> findByLogKey(@Param("logKey") String logKey);
 
   @Query(name = "message.log.keys.to.erase")
-  List<String> findLogKeysToErase(LocalDateTime pivoteDate, Pageable pageable);
+  List<String> findLogKeysToErase(@Param("pivoteDate") LocalDateTime pivoteDate, Pageable pageable);
 
   @Query(name = "delete.message.log")
   @Modifying

@@ -4,5 +4,4 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
 
     <include file="audit-log-persistence-changelog.xml" relativeToChangelogFile="true"/>
-    <include file="eraser.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

@@ -23,7 +23,6 @@
 		<sonar.jacoco.reportPath>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPath>
 		<sonar.language>java</sonar.language>
 		<spotless.version>2.10.0</spotless.version>
-		<liquibase.version>3.6.1</liquibase.version>
 	</properties>
 
 	<scm>
@@ -50,8 +49,6 @@
 		</developer>
 	</developers>
 
-
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -74,15 +71,6 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.liquibase</groupId>
-				<artifactId>liquibase-maven-plugin</artifactId>
-				<version>${liquibase.version}</version>
-				<configuration>
-					<propertyFile>src/main/resources/liquibase/liquibase-maven-plugin.properties</propertyFile>
-					<changeLogFile>src/main/resources/changelog/changelog.xml</changeLogFile>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

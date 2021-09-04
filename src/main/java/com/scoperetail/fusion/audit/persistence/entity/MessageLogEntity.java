@@ -9,9 +9,9 @@ package com.scoperetail.fusion.audit.persistence.entity;
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,8 +21,17 @@ package com.scoperetail.fusion.audit.persistence.entity;
  */
 
 import java.time.LocalDateTime;
-import javax.persistence.*;
-import lombok.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Builder
 @NoArgsConstructor
@@ -36,6 +45,18 @@ public class MessageLogEntity {
   @Column(name = "id", nullable = false)
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+
+  @Column(name = "transport_type", nullable = false)
+  private String transportType;
+
+  @Column(name = "audit_type", nullable = false)
+  private String auditType;
+
+  @Column(name = "result", nullable = false)
+  private String result;
+
+  @Column(name = "outcome", nullable = false)
+  private String outcome;
 
   @Column(name = "log_key", nullable = false)
   private String logKey;

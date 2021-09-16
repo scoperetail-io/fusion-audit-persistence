@@ -12,10 +12,10 @@ package com.scoperetail.fusion.audit.persistence.entity;
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -53,16 +53,17 @@ public class MessageLogEntity {
   private Long id;
 
   @Column(name = "transport_type", nullable = false)
-  private String transportType;
+  private String transportType; //JMS,  REST,  MAIL,  KAFKA
 
   @Column(name = "audit_type", nullable = false)
-  private String auditType;
+  private String auditType; //IN, OUT
 
   @Column(name = "result", nullable = false)
-  private String result;
+  private String result; //SUCCESS,  FAILURE
 
   @Column(name = "outcome", nullable = false)
-  private String outcome;
+  private String
+      outcome; // COMPLETE,  ONLINE_RETRY_START,  ONLINE_RETRY_IN_PROGRESS,  OFFLINE_RETRY_START,  OFFLINE_RETRY_IN_PROGRESS
 
   @Column(name = "log_key", nullable = false)
   private String logKey;
